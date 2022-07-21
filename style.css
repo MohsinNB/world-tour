@@ -186,3 +186,54 @@ body{
     margin-right: 40px;
     color: whitesmoke;
 }
+
+/* -======================================================
+                            media queries
+-=========================================================== */
+/* mobile screen */
+@media only screen and (max-width: 688px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+    .main .title{
+        text-align: center;
+    }
+    .middle{
+        flex-direction: column;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .nav-box{
+        width: 85%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #click{
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+    .blogs{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-down a{
+        display: block;
+        color: lightgray;
+        margin-bottom: 10px;
+    }
+
+}
