@@ -59,6 +59,44 @@ body{
     color: white;
     border: 1px solid #DD0000;
 }
+/* <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                animation
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= --> */
+@keyframes sliding {
+    0%{
+        left: 0;
+        top: 0;
+    }
+    25%{
+        top: 200px;
+
+    }
+    50%{
+        top: 0;
+
+    }
+    75%{
+        top: 200px;
+    }
+    100%{
+        left: 300px;
+        top: 0;
+    }
+    
+}
+.stage{
+    width: 300px;
+    height: 300px;
+
+}
+.ball img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    animation: sliding 1.5s ease-in-out 0.5s infinite alternate ;
+    animation-play-state: running;
+}
 
 /* -------=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=--------==-=-=-=-=
                             middle side
@@ -160,6 +198,20 @@ body{
     margin-right: 13px;
 
 }
+.view {
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 20px;
+
+
+    display: none;
+}
+.view a{
+    color: white;
+    text-decoration: none;
+}
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-================-=----------
                     footer area
 -=========================================------------------ */
@@ -186,6 +238,18 @@ body{
     margin-right: 40px;
     color: whitesmoke;
 }
+.mobile-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: none;
+}
+.mobile-icon a{
+    margin-right: 20px;
+    font-size: 25px;
+    color: wheat;
+}
 
 /* -======================================================
                             media queries
@@ -201,7 +265,7 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 100%;
     }
     .main .title{
         text-align: center;
@@ -216,6 +280,7 @@ body{
         width: 85%;
         background-color: white;
         display: flex;
+        margin: auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -225,7 +290,7 @@ body{
         border-radius: 5px;
     }
     .blogs{
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -233,7 +298,72 @@ body{
     .footer-down a{
         display: block;
         color: lightgray;
-        margin-bottom: 10px;
+        margin: auto;
+        padding: 10px;
+    }
+    .mobile-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+}
+/* tablet screen */
+@media only screen and (min-width: 688px) and (max-width: 991px) {
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .middle{
+        flex-direction: column;
+    }
+    .shedule{
+        display: flex;
+    }
+    .middle-foot-button{
+        display: flex;
+        justify-content: center;
+    }
+    .view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .nav-box{
+        width: 85%;
+        height: auto;
+        background-color: white;
+        margin: auto;
+    }
+    .shedule{
+        display: flex;
+        flex-direction: row;
+    }
+    #click{
+        border: 1px solid lightgray;
+        margin-right: 15px;
+ 
+    }
+}
+
+
+
+/* -========================================================
+                        other website
+-======================================================== */
+.group-blog{
+    width: 250px;
+    height: 160px;
+    padding: 20px;
+    border: 0.5px solid lightgray ;
+    border-radius: 10px;
+ 
+}
+.group-blog-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.group-blog-info{
+    text-align: center;
 }
