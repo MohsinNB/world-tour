@@ -94,7 +94,7 @@ body{
     height: 100px;
     border-radius: 50%;
     position: relative;
-    animation: sliding 1.5s ease-in-out 0.5s infinite alternate ;
+    animation: sliding 2s ease-in-out 0.5s infinite alternate ;
     animation-play-state: running;
 }
 
@@ -343,6 +343,28 @@ body{
         border: 1px solid lightgray;
         margin-right: 15px;
  
+    }
+
+        @keyframes sliding {
+            0%{
+                left: 0;
+                top: 0;
+            }
+            25%{
+                top: 200px;
+        
+            }
+            50%{
+                top: 0;
+        
+            }
+            75%{
+                top: 200px;
+            }
+            100%{
+                left: 200px;
+                top: 0;
+            }
     }
 }
 
